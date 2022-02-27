@@ -14,6 +14,7 @@ import Profile from './pages/Dashboard/Profile/Profile';
 import Wishlist from './pages/Dashboard/Wishlist/Wishlist';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
+import NotFound from './pages/NotFound/NotFound';
 import Payment from './pages/Payment/Payment';
 import Register from './pages/Register/Register';
 import Shop from './pages/Shop/Shop/Shop';
@@ -36,7 +37,7 @@ const App = () => {
                 <BrowserRouter>
                     <Header></Header>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route exact path="/" element={<Home />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/shop" element={<Shop />} />
                         <Route path="/cart" element={<UserRoute><Cart /></UserRoute>} />
@@ -50,6 +51,7 @@ const App = () => {
                         <Route path="/contact-us" element={<Contact />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/login" element={<Login />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                     <Footer></Footer>
                 </BrowserRouter>

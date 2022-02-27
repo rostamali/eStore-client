@@ -1,0 +1,7 @@
+#notfound{
+    background-color: var(--bg-light-color);
+    padding: 60px 0;
+}
+img.notfound__thumbnail {
+    width: 60%;
+}
