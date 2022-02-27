@@ -62,7 +62,7 @@ const Shop = () => {
                 <div id="shop__section">
                     <div className="container">
                         <div className="products">
-                            <div className="row">
+                            <div className="row gy-4">
                                 <div className="col-lg-3 col-md-12 col-12">
                                     <div className="shop__sidebar">
                                         <Filter/>
@@ -71,15 +71,6 @@ const Shop = () => {
                                 <div className="col-lg-9 col-md-12 col-12">
                                     <div className="shop__products--wrapper">
                                         <div className="row gy-4">
-                                            {/* {
-                                                filter.map(product => <DisplayProduct
-                                                    key = {product.id}
-                                                    products = {product}
-                                                    handleAddCart = {handleAddCart}
-                                                    handleRemoveCart = {handleRemoveCart}
-                                                    cart = {cart}
-                                                ></DisplayProduct>)
-                                            } */}
                                             {displayProduct}
                                             <ReactPaginate
                                                 breakLabel="..."

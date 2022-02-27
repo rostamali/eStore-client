@@ -248,9 +248,56 @@ button#slick-disabled:hover {
 .flashDeal__slider .container{
     padding: 0 15px;
 }
+
+/* ============ swiper arrow ============== */
+.flashDeal__slider>.container{
+    position: relative;
+}
+/* .swiper__navigation{
+    position: absolute;
+} */
+
+.swiper__arrow--prev,
+.swiper__arrow--next{
+    outline: none;
+    border-radius: 500px;
+    font-weight: 600;
+    transition: all 150ms ease-in-out 0s;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--bg-dark-color);
+    font-size: 14px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    z-index: 111;
+}
+.swiper__arrow--prev{
+    left: -5px;
+}
+.swiper__arrow--next{
+    right: -5px;
+}
+.swiper-button-disabled{
+    background-color: #dae1e7;
+    color: var(--bg-dark-color);
+}
+
+
 /* media query */
 @media only screen and (max-width: 575px){
     .flashDeal__slider .product__wrapper{
         margin: 0 10px;
+    }
+    .swiper__arrow--prev{
+        left: 0px;
+    }
+    .swiper__arrow--next{
+        right: 0px;
     }
 }

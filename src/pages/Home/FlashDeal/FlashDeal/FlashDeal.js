@@ -3,9 +3,8 @@ import { BsFillLightningChargeFill, BsFillSuitHeartFill } from "react-icons/bs";
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './FlashDeal.css';
 import { MyContext } from '../../../../App';
-
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import 'swiper/css';
-
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Pagination, Navigation } from "swiper";
 import { useEffect } from 'react';
@@ -41,6 +40,9 @@ const FlashDeal = () => {
         return <span className="item__qty">{specificProduct?.cartQty}</span>;
     }
 
+    const navigationPrevRef = React.useRef(null)
+    const navigationNextRef = React.useRef(null)
+
 
     return (
         <>
@@ -63,6 +65,7 @@ const FlashDeal = () => {
                     </div>
                     :
                     <div className="flashDeal__slider">
+                        
                         <div className="container">
                             <Swiper
                                 slidesPerView={1}
@@ -86,7 +89,10 @@ const FlashDeal = () => {
                                 }}
                                 modules={[Pagination]}
                                 className="mySwiper"
-                                navigation
+                                navigation={{
+                                    prevEl: navigationPrevRef.current,
+                                    nextEl: navigationNextRef.current,
+                                }}
                                 modules={[Navigation, Pagination]}
                             >
                             
@@ -153,6 +159,8 @@ const FlashDeal = () => {
                                     </SwiperSlide>)
                                 }
                             </Swiper>
+                            <button ref={navigationPrevRef} className="swiper__arrow--prev"><FaArrowLeft/></button>
+                            <button ref={navigationNextRef} className="swiper__arrow--next"><FaArrowRight/></button>
                         </div>
                     </div>
                 }

@@ -39,3 +39,24 @@
     padding: 0 25px;
     text-transform: uppercase;
 }
+
+/* media query */
+@media only screen and (max-width: 767px){
+    .newsletter__wrapper .input-group {
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width: 425px){
+    .newsletter__wrapper .input-group {
+        flex-wrap: wrap;
+    }
+    .newsletter__wrapper .input-group>input.newsletter__form {
+        border-radius: 6px;
+        border-top-right-radius: 6px!important;
+        border-bottom-right-radius: 6px!important;
+    }
+    button.subscribe__btn {
+        margin-top: 10px;
+        border-radius: 6px!important;
+    }
+}

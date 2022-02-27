@@ -5,9 +5,6 @@
 .newArrival__slider {
     padding: 30px 0 50px 0;
 }
-.newArrival__slider .container{
-    padding: 0;
-}
 .newArrival__slider--thumbnail img{
     width: 100%;
 }
@@ -38,4 +35,22 @@
 }
 .newArrival__slider .slick-list {
     padding: 0 10px;
+}
+
+/* arrow btn */
+.newArrival__slider>.container{
+    position: relative;
+}
+
+/* media query */
+@media only screen and (max-width: 600px){
+    .newArrival__slider .slick-slide>div {
+        margin: 0 0px;
+    }
+    .newArrival__slider--thumbnail{
+        text-align: center;
+    }
+    .newArrival__slider--thumbnail img {
+        width: 100%;
+    }
 }

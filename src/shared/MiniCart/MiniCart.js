@@ -23,6 +23,7 @@ const MiniCart = (props) => {
             <Offcanvas show={showMiniCart} onHide={handleCloseMiniCart} placement={'end'} scroll backdrop>
                 <div className="miniCart__header">
                     <span><BsHandbag/> {cart.length} item</span>
+                    <button onClick={()=>handleCloseMiniCart()} type="button" class="btn-close text-reset" aria-label="Close"></button>
                 </div>
                 
                 <div className="miniCart__container">

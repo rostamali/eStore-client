@@ -8,79 +8,13 @@ import img3 from '../../../images/new-arrival-3.png';
 import img4 from '../../../images/new-arrival-4.png';
 import img5 from '../../../images/new-arrival-5.png';
 import img6 from '../../../images/new-arrival-6.png';
-import Slider from 'react-slick';
+import { Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const NewArrival = () => {
-
-    function NextNavButton(props) {
-        const {onClick} = props;
-        return (
-            <button className="slick-arrow res-slick-next"
-            onClick={onClick}><FaArrowRight/></button>
-        );
-    }
-
     
-    function PrevNavButton(props) {
-        const {onClick} = props;
-        return (
-            <button className="slick-arrow res-slick-prev"
-            onClick={onClick}><FaArrowLeft/></button>
-        );
-    }
-    
-    const settings = {
-        speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplaySpeed: 2000,
-        touchMove: false,
-        infinite: false,
-        nextArrow: <NextNavButton/>,
-        prevArrow: <PrevNavButton/>,
-        responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 6,
-                slidesToScroll: 1,
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            },
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            },
-            {
-              breakpoint: 800,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            }
-        ],
-        arrows: true
-    };
+    const navigationPrevRef = React.useRef(null)
+    const navigationNextRef = React.useRef(null)
 
     return (
         <>
@@ -94,106 +28,150 @@ const NewArrival = () => {
                 </div>
                 <div className="newArrival__slider">
                     <div className="container">
-                        <Slider {...settings}>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img1} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={10}
+                            pagination={{
+                            clickable: true,
+                            }}
+                            breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 4,
+                                spaceBetween: 30,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                                spaceBetween: 40,
+                            },
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            navigation={{
+                                prevEl: navigationPrevRef.current,
+                                nextEl: navigationNextRef.current,
+                            }}
+                            modules={[Navigation, Pagination]}
+                        >
+                            
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img1} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img2} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img2} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img3} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img3} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img4} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img4} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img5} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img5} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img6} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img6} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="newArrival__slider--signle">
-                                <div className="newArrival__slider--thumbnail">
-                                    <img src={img1} alt="" />
-                                </div>
-                                <div className="productSlider__info--wrapper">
-                                    <div className="productSlider__info">
-                                        <h3 className="product__sm--title">Smart watch black</h3>
-                                        <div className="flashDeal__price--details">
-                                            <span className="current__price">$110.00</span>
-                                            <span className="regular__price"><del>$255.00</del></span>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="newArrival__slider--signle">
+                                    <div className="newArrival__slider--thumbnail">
+                                        <img src={img1} alt="" />
+                                    </div>
+                                    <div className="productSlider__info--wrapper">
+                                        <div className="productSlider__info">
+                                            <h3 className="product__sm--title">Smart watch black</h3>
+                                            <div className="flashDeal__price--details">
+                                                <span className="current__price">$110.00</span>
+                                                <span className="regular__price"><del>$255.00</del></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Slider>
+                            </SwiperSlide>
+                        </Swiper>
+                        <button ref={navigationPrevRef} className="swiper__arrow--prev"><FaArrowLeft/></button>
+                        <button ref={navigationNextRef} className="swiper__arrow--next"><FaArrowRight/></button>
                     </div>
                 </div>
             </div>
