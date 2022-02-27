@@ -1,0 +1,48 @@
+#payment{
+    background-color: var(--bg-light-color);
+    padding: 50px 0;
+}
+
+.payment__form--wrapper {
+    width: 40%;
+    margin: auto;
+    background-color: var(--white-color);
+    padding: 50px 35px 0px 35px;
+    border-radius: 5px;
+}
+
+/* media query */
+@media only screen and (max-width: 1440px){
+    .payment__form--wrapper {
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 1150px){
+    .payment__form--wrapper {
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 992px){
+    .payment__form--wrapper {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .payment__form--wrapper {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 550px){
+    .payment__form--wrapper {
+        width: 90%;
+        padding: 20px 20px 15px 20px;
+    }
+    .payment__form--wrapper .checkout__sidebar {
+        padding: 0px 0px 0px 0px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .payment__form--wrapper {
+        width: 100%;
+    }
+}

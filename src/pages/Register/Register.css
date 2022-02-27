@@ -1,0 +1,21 @@
+#register{
+    background-color: var(--bg-light-color);
+    padding: 60px 0;
+}
+.form__wrapper{
+    width: 35%;
+    margin: auto;
+}
+
+.form__btn{
+    border: 1px solid var(--brand-color);
+    margin-bottom: 10px;
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+}

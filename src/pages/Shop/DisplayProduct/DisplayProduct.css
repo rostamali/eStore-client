@@ -1,0 +1,4 @@
+button.btn__overly.btn__wishlist .wishlist__full--heart{
+    font-size: 22px;
+    fill: var(--brand-color);
+}

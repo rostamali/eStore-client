@@ -1,0 +1,41 @@
+#newArrival{
+    background-color: var(--bg-light-color);
+    padding: 50px 0;
+}
+.newArrival__slider {
+    padding: 30px 0 50px 0;
+}
+.newArrival__slider .container{
+    padding: 0;
+}
+.newArrival__slider--thumbnail img{
+    width: 100%;
+}
+
+.newArrival__slider .slick-slider.slick-initialized {
+    position: relative;
+}
+.newArrival__slider .slick-list {
+    overflow: hidden;
+}
+.newArrival__slider .slick-track {
+    display: flex;
+}
+.newArrival__slider .slick-slide>div {
+    margin: 0 10px;
+}
+.newArrival__slider button.slick-arrow.res-slick-next {
+    position: absolute;
+    top: 45%;
+    right: -20px;
+    z-index: 33;
+}
+.newArrival__slider button.slick-arrow.res-slick-prev{
+    position: absolute;
+    top: 45%;
+    left: -5px;
+    z-index: 33;
+}
+.newArrival__slider .slick-list {
+    padding: 0 10px;
+}

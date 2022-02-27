@@ -1,0 +1,106 @@
+#banner{
+    background-color: var(--bg-light-color);
+    padding: 30px 0;
+}
+.banner__product{
+    background-color: var(--white-color);
+    box-shadow: rgb(3 0 71 / 4%) 0px 0px 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+.banner__product:hover{
+    box-shadow: rgb(3 0 71 / 9%) 0px 8px 45px;
+}
+.banner__category{
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.bannerWomen__product .row{
+    align-items: center;
+}
+.banner__product--thumbnail{
+    text-align: center;
+}
+.banner__product--thumbnail img{
+    height: 190px;
+    text-align: center;
+    display: inline-block;
+}
+.bannerWomen__product,
+.bannerMen__product,
+.bannerSpecial__product{
+    padding: 40px 50px;
+}
+.bannerSpecial__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner__product--title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 38px;
+}
+.banner__product--short-desc{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.banner__btn:link,
+.banner__btn:visited{
+    border-bottom: 2px solid rgb(233, 69, 96);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--title-font-color);
+    text-transform: uppercase;
+}
+
+
+/* =================== feature section =================== */
+.feature__product .row{
+    align-items: center;
+}
+.feature__box{
+    padding: 40px 50px;
+    background-color: var(--white-color);
+    height: 100%;
+    box-shadow: rgb(3 0 71 / 4%) 0px 0px 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+.feature__box:hover{
+    box-shadow: rgb(3 0 71 / 9%) 0px 8px 45px;
+}
+.feature__box--icon img{
+    height: 70px;
+    margin-bottom: 20px;
+}
+.feature__box--title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* banner media query */
+@media only screen and (max-width: 450px){
+    .bannerWomen__product,
+    .bannerMen__product,
+    .bannerSpecial__product{
+        padding: 20px 30px;
+    }
+    .banner__product--thumbnail img {
+        height: auto;
+        width: 100%;
+    }
+    .banner__product--title {
+        font-size: 24px;
+    }
+}

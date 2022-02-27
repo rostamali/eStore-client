@@ -1,0 +1,73 @@
+#dashboard{
+    padding: 50px 0;
+    background-color: var(--bg-light-color);
+}
+.dashboard__container{
+    background-color: var(--white-color);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+h2.dashboard__container--title {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.dashboard__container--icon{
+    fill: var(--brand-color);
+    margin-right: 10px;
+    stroke-width: 0.2px;
+}
+.order__list--title{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-muted);
+    width: 25%;
+}
+.order__list--header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0 0 0;
+}
+
+
+.order__list--header{
+    margin-bottom: 20px;
+}
+.order__list--item {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.order__list--item>h5{
+    width: 25%;
+}
+h5.order__number {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--title-font-color);
+}
+.order__status span{
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 6px 16px;
+    border-radius: 35px;
+}
+.order__date,
+.order__cost{
+    font-size: 14px;
+    color: var(--title-font-color);
+}
+
+.pending,
+.processing{
+    background-color: #0f346033;
+}
+.delivered{
+    background-color: #33d06726;
+    color: #33d067;
+}

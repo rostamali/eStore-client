@@ -1,0 +1,220 @@
+#headerTop{
+    background-color: var(--bg-dark-color);
+    padding: 8px 0;
+}
+.headerTop__contactList{
+    color: var(--white-color);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.headerTop__contactList--icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+.headerTop__contactList span{
+    margin-right: 15px;
+}
+.headerTop__link:link,
+.headerTop__link:visited{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--white-color);
+    display: block;
+    text-align: end;
+}
+.headerTop__link:hover,
+.headerTop__link:active{
+    color: var(--brand-color);
+}
+#headerTop .row{
+    align-items: center;
+}
+
+
+/* ================== header middle form ================== */
+#headerMiddle .row{
+    align-items: center;
+}
+div#headerMiddle {
+    padding: 10px 0;
+}
+.search__form--group{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border: 1px solid #dae1e7;
+    border-radius: 25px;
+}
+.searchForm__icon {
+    width: 45px;
+    line-height: 40px;
+    text-align: center;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchForm__wrapper {
+    flex-grow: 3;
+}
+#searchForm {
+    border: none;
+    padding: 6px 6px 6px 4px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7d879c;
+    width: 100%;
+    outline: none;
+}
+.searchForm__category--wrapper .custom__select {
+    border: none;
+    width: 100%;
+}
+.searchForm__category--wrapper .custom__select:after {
+    border-left: none;
+}
+.searchForm__category--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #dae1e7;
+    flex-grow: .4;
+}
+.searchForm__category {
+    padding: 0 6px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7d879c;
+}
+
+select.searchForm__category {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+.headerMiddle__icon{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background-color: #f3f5f9;
+    border: none;
+    line-height: 40px;
+    border-radius: 35px;
+    font-size: 18px;
+}
+.headerMiddle__icon svg{
+    margin-top: -3px;
+    stroke-width: 0.3px;
+}
+img.header__logo {
+    height: 65px;
+}
+
+div#headerMenu {
+    padding: 20px 0;
+}
+.nav__menu{
+    text-align: end;
+}
+.menu__link:link,
+.menu__link:visited{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--title-font-color);
+    margin-left: 25px;
+    transition: all 0.3s;
+}
+
+.menu__link:hover,
+.menu__link:active{
+    color: var(--brand-color);
+}
+.menu__link.active{
+    color: var(--brand-color);
+}
+
+/* header middle icon */
+.headerMiddle__icon{
+    position: relative;
+}
+.headerMiddle__icon .cart__qty--number{
+    position: absolute;
+    top: 0;
+    height: 19px;
+    width: 19px;
+    background-color: var(--brand-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    right: -3px;
+}
+
+.stickyNav{
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s;
+    z-index: 1023;
+}
+
+.signout__btn{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--title-font-color);
+    margin-left: 25px;
+    transition: all 0.3s;
+    background-color: transparent;
+    border: none;
+}
+.signout__btn:hover{
+    color: var(--brand-color);
+}
+
+
+/* header media query */
+@media only screen and (max-width: 1024px){
+    .res__search--form{
+        display: none;
+    }
+    .nav__menu {
+        text-align: center;
+    }
+    .menu__link {
+        margin-left: 0;
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .headerTop__link:link, .headerTop__link:visited {
+        text-align: center;
+    }
+    .headerTop__contactList {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 334px){
+    .headerTop__contactList {
+        margin-bottom: 2px;
+    }
+}

@@ -1,0 +1,11 @@
+#shop__section{
+    background-color: #F6F9FC;
+    padding: 60px 0;
+}
+
+.shop__sidebar{
+    background-color: var(--white-color);
+    padding: 30px 28px;
+    box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+    border-radius: 8px;
+}

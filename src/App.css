@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+/* ====================== Google Fonts ====================== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+/* ====================== Common Style ====================== */
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --title-font-color: #2B3444;
+  --body-font-color: #7D879C;
+  --product-title-color: #373f50;
+  --brand-color: #e94560;
+  --bg-dark-color: #0f3460;
+  --bg-light-color: #f6f9fc;
+  --white-color: #FFFFFF;
+  --text-muted: #7d879c;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand__color{
+  color: var(--brand-color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text__muted{
+  color: var(--text-muted);
+}
+.short__subtitle{
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.short__text{
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.mt__lg{
+  margin-top: 40px;
+}
+.mt__sm{
+  margin-top: 10px;
+}
+.mt__md{
+  margin-top: 20px;
+}
+.align__center{
   display: flex;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
+}
+.equal__margin{
+  margin: 0 10px;
+}
+.sectionHeader__title{
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.sectionHeader__sm--title{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-color);
+}
+.sectionHeader__icon {
+  fill: var(--brand-color);
+  margin-right: 6px;
+}
+button:focus{
+  outline: none;
+}
+.countdown__title{
+  font-size: 17px;
+  color: var(--title-font-color);
+  font-weight: 600;
+}
+.btn__buy-now{
+  background-color: var(--brand-color);
+  border: none;
+  color: var(--white-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+/* ====================== Sidebar ====================== */
+.sidebar__title{
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.form__label{
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* ====================== Cart Item ====================== */
+.btn__hidden{
+  opacity: 0;
+}
+.btn__block{
+  opacity: 1;
+}
+/* ====================== Pagination style ====================== */
+li.pageItem {
+  height: 40px;
+  width: 40px;
+  background: var(--white-color);
+  margin: 0 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 50%;
+  border: 2px solid var(--brand-color);
+}
+li.previousPage,
+li.nextPage{
+  height: 40px;
+  width: 40px;
+  background: var(--white-color);
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--brand-color);
+}
+a.pageLink {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+li.pageItem.activePage {
+  background: var(--brand-color);
+}
+li.pageItem.activePage a.pageLink {
+  color: var(--white-color);
+}
+a.previousPageLink svg {
+  fill: var(--brand-color);
+}
+a.nextPageLink svg {
+  fill: var(--brand-color);
+}
+.paginationContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+li.disabled {
+  background-color: #dae1e7;
+  color: var(--body-font-color);
+  border: 2px solid #dae1e7;
+}
+/* ====================== Link color ====================== */
+.notification__color:link,
+.notification__color:visited{
+  color: var(--brand-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+p.error__msg {
+  background-color: #FAE5E5;
+  padding: 6px;
+  color: red;
+  font-size: 15px;
+  font-weight: 400;
+}
+/* ====================== Spinner ====================== */
+div#spinner__section {
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-light-color);
+}
+.spinner__color{
+  color: var(--brand-color);
 }
 
-.App-link {
-  color: #61dafb;
+button.payment__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment__spinner.spinner-border {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.payment__btn.btn__disabled{
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #dae1e7;
+  color: var(--body-font-color);
+  border-color: #dae1e7;
+}
+/* ====================== Sweet alert style ====================== */
+
+.swal2-actions button.swal2-confirm.alert__confirm--btn.swal2-styled{
+  border: 1px solid var(--brand-color);
+  margin-bottom: 10px;
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  padding: 8px 18px;
+  border-radius: 5px;
+}
+.swal2-actions button.swal2-cancel.alert__cancel--btn.swal2-styled{
+  border: 1px solid var(--brand-color);
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: var(--brand-color);
+  padding: 8px 18px;
+  border-radius: 5px;
+}
+.swal2-actions button.swal2-cancel.alert__cancel--btn.swal2-styled:hover{
+  background-color: var(--brand-color);
+  color: var(--white-color);
+}
+button.swal2-confirm.alert__confirm--btn.swal2-styled:focus {
+  box-shadow: 0 0 0 3px transparent;
+}
+button.swal2-cancel.alert__cancel--btn.swal2-styled:focus {
+  box-shadow: 0 0 0 3px transparent;
+}
+
+/* ========== form grid ============ */
+@media only screen and (max-width: 600px){
+  .form__grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
 }

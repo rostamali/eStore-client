@@ -1,0 +1,26 @@
+.checkout__sidebar{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+.total__cost--count{
+    margin: 20px 0 30px 0;
+}
+.payment__btn{
+    border: 1px solid var(--brand-color);
+    margin-bottom: 10px;
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 992px){
+    .checkout__sidebar{
+        margin-top: 25px;
+    }
+}

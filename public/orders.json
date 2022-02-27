@@ -1,0 +1,26 @@
+[
+    {
+      "orderNo": "1050017AS",
+      "orderStatus": "pending",
+      "orderDate": "Feb 22, 2022",
+      "totalCost": 350
+    },
+    {
+      "orderNo": "1050018AS",
+      "orderStatus": "processing",
+      "orderDate": "Feb 22, 2022",
+      "totalCost": 550
+    },
+    {
+      "orderNo": "1050019AS",
+      "orderStatus": "delivered",
+      "orderDate": "Feb 22, 2022",
+      "totalCost": 700
+    },
+    {
+      "orderNo": "1050020AS",
+      "orderStatus": "delivered",
+      "orderDate": "Feb 22, 2022",
+      "totalCost": 470
+    }
+]

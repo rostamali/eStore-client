@@ -1,0 +1,100 @@
+#dealDay{
+    background-color: var(--bg-light-color);
+    padding: 50px 0;
+}
+#dealDay .container{
+    padding: 0;
+}
+.dealDay__slider--signle{
+    background-color: var(--white-color);
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: rgb(3 0 71 / 4%) 0px 0px 28px;
+}
+.dealDay__slider--thumbnail{
+    text-align: center;
+}
+.dealDay__slider--thumbnail img{
+    max-width: 100%;
+    margin: auto;
+}
+.dealDay__slider--signle .row{
+    align-items: center;
+}
+.product__lg--title{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--title-font-color);
+}
+
+/* ========== carousel =========== */
+.carousel__dot {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    border-radius: 35px;
+    margin: 0.25rem;
+    cursor: pointer;
+    border: 1px solid var(--bg-dark-color);
+    background-color: transparent;
+}
+.carousel__dot.carousel__dot--selected::after{
+    position: absolute;
+    content: '';
+    background-color: var(--bg-dark-color);
+    height: 9px;
+    width: 9px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 35px;
+}
+.dealDay__arrow--btn{
+    outline: none;
+    border-radius: 500px;
+    font-weight: 600;
+    transition: all 150ms ease-in-out 0s;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--brand-color);
+    font-size: 14px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 14px;
+    margin-right: 8px;
+}
+.dealDay__arrow--btn svg{
+    height: 40px;
+}
+.dealDay__arrow--btn:disabled {
+    background-color: #dae1e7;
+    color: var(--body-font-color);
+}
+.dealDay__arrow--btn:hover:disabled{
+    background-color: var(--brand-color);
+    color: var(--white-color);
+}
+.carousel__dot-group.btn__dots {
+    text-align: center;
+}
+
+
+/* media query */
+@media only screen and (max-width: 1400px){
+    #dealDay .horizontalSlider___281Ls.carousel__slider.carousel__slider--horizontal {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 992px){
+    #dealDay .horizontalSlider___281Ls.carousel__slider.carousel__slider--horizontal {
+        height: 850px;
+    }
+}
+@media only screen and (max-width: 452px){
+    #dealDay .horizontalSlider___281Ls.carousel__slider.carousel__slider--horizontal {
+        height: 860px;
+    }
+    .countdown #countdown__timer {
+        grid-template-columns: repeat(2, 90px);
+    }
+}
