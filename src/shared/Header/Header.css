@@ -213,6 +213,14 @@ div#headerMenu {
         margin-bottom: 10px;
     }
 }
+@media only screen and (max-width: 550px){
+    .nav__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 @media only screen and (max-width: 334px){
     .headerTop__contactList {
         margin-bottom: 2px;
